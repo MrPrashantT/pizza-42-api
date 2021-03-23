@@ -13,8 +13,8 @@ require('dotenv').config()
 
 const app = express();
 
-const port = process.env.API_PORT || 3001;
-const appPort = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
+const appPort = process.env.APP_PORT || 3000;
 const appOrigin = process.env.appOrigin || `http://localhost:${appPort}`;
 
 if (
