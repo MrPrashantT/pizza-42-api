@@ -61,7 +61,7 @@ app.get("/test", (req, res) => {
   res.send({msg: "Success"});
 });
 
-app.post("/api/order", checkJwt, async (req, res) => {
+app.post("/api/order", checkJwt, checkScopes, async (req, res) => {
 
 
   if(!req.user['https://pizza42.com/email_verified']){
