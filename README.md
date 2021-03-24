@@ -4,9 +4,15 @@ This sample API is to demonstrate the API authorization capabilities of Auth0 in
 
 ## Setup 
 1. Clone this repository
-2. Rename the `.env.sample` file to `.env` and replace all placeholder values with the appropriate values from your Auth0 tenant. `domain`, `audience` , `m2mClientId` and `m2mClientSecret`.
-3. `npm install  `
-4. `npm start`
+2. In Auth0, [register a M2M (Machine-to-machine) application](https://auth0.com/docs/applications/set-up-an-application/register-machine-to-machine-applications). Note the `client_id` and `client_secret`.
+3. [Register an API](https://auth0.com/docs/get-started/set-up-apis) to represent the API and create a permission (scope) e.g. `create:order` . Authorize the application created in (2). Note the `audience` and `permission`.
+4. Rename the `.env.sample` file to `.env` and replace all placeholder values with the appropriate values from your Auth0 tenant.
+	  - `domain`: your Auth0 tenant domain
+	  - `m2mClientId` : `client_id` value from step (2)
+	  - `m2mClientSecret`: `client_secret` value from step (2)
+	  -  `audience` : `audience` value from step (3)
+6. `npm install  `
+7. `npm start`
 
 ## Functionality
 
